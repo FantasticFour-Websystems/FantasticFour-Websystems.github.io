@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- INITIALIZING/NECESSARY INCLUDES -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Fantastic Four Group Portfolio</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <!-- NAVBAR/HEADER -->
+    <img class = "rpi-header" src="resources/header1.jpg" alt="RPI Header">
+    <div class="navbar">
+      <a href="index.html">Home</a>
+      <div class="subnav">
+        <button class="subnavbtn">Meet Our Team<i class="fa fa-chevron-circle-down"></i></button>
+        <div class="subnav-content">
+          <a href ="profiles/ngoe.html">Emily Ngo</a>
+          <a href="profiles/tant3.html">Tobey Tan</a>
+          <a href="profiles/morawn.html">Nicolas Morawski</a>
+          <a href="profiles/liuz20.html">Zijin Liu</a>
+        </div>
+      </div> 
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <!-- HEADER-->
+
+    <img src="resources/logo.png" alt="logo" id="logo">
+    <h1 id = "heading">Fantastic Four</h1>
+
+    <!-- DESCRIPTION OF OUR PRODUCT-->
+    <div class = "main-text">
+      <h2>Our Slogan: "Just a click away!"</h2>
+      <p>
+        Welcome to the landing page of our team, Fantastic Four. Here, you will find information regarding each of our team members as well as sample projects that we have worked on previously. You can click on the navigation bar above or on the pictures below to access each of our personal resumes. Additionally, you can see our project progress as time goes on. We are currently at the stage of writing our project proposal.
+      </p>
+    </div>
+    <br>
+
+
+    <!-- TEAM MEMBERS INFO-->
+  <h1>OUR TEAM</h1>
+  
+
+
+   <table class = "tm-table">
+      <tr class = "tm-row">
+        <td class = "tm-col">
+          <a class="image" href="profiles/ngoe.html">
+            <img alt="image" class = "profilePic" src="resources/ngoe-ProfilePic.jpg">
+          </a>
+          <br>
+          Emily Ngo
+        </td>
+        <td class = "tm-col">
+          <a class="image" href="profiles/tant3.html">
+            <img alt="image" class = "profilePic" src="resources/tobey.png">
+          </a>
+          <br>
+        Tobey Tan
+        </td>
+      </tr>
+      <tr class = "tm-row">
+        <td class = "tm-col">
+          <a class="image" href="profiles/morawn.html">
+            <img alt="image" class = "profilePic" src="resources/nicPFP.JPG">
+          </a>
+          <br>
+          Nicolas Morawski
+        </td>
+        <td class = "tm-col">
+          <a class="image" href="profiles/liuz20.html">
+            <img alt="image" class = "profilePic" src="resources/Sherry.jpeg">
+          </a>
+          <br>
+          Zijin Liu
+        </td>
+      </tr>
+    </table>
+
+
+
+    <!--PREVIOUS WORKS -->
+  <h1>PREVIOUS WORKS</h1>
+  <table class = "pw-table">
+      <tr class = "pw-row">
+        <td class = "pw-col">
+        <p>RPI Swap</p>
+        <figure>
+          <img title="RPISwap" class = "pw-pic" src="resources/RPISwap.png" alt="previous work">
+          <figcaption>
+            The function of this web application was to provide a platform for RPI students to lend and borrow items from one another. A user on this application would be able to request an item and post their items they are willing to lend to others.
+          </figcaption>
+        </figure>
+        </td>
+        <td  class = "pw-col">
+          <p> The Fitness Tracker </p>
+          <figure>
+          <img title="FitnessTracker" class = "pw-pic" src="resources/fitness.JPG" alt="previous work">
+          <figcaption>
+            The function of this web applicaton was to help users start and maintain a fitness plan. Users would input info about themselves and their goals, and the system would output recommended recipes, workout plans, and nearby fitness facilities.            
+          </figcaption>
+        </figure>
+        </td>
+        <td  class = "pw-col">
+          <p> Freshman-helpcenter </p>
+          <figure>
+            <img title="RPI-helpcenter" class = "pw-pic" src="resources/Project-before.png" alt="previous work">
+            <figcaption>
+              The function of this web applicaton was to help freshmen acclimate to the RPI atmosphere, in particular, by helping with navigation and organization.
+            </figcaption>
+          </figure>
+          
+        </td>
+      </tr>
+    </table>
+
+    <h1>CURRENT PROJECT PROGRESS</h1>
+    <div class = "tp">
+        <progress id="bar" value="5" max="100"><span>0</span>%</progress> 
+      <p id = "task">Current Task: Project Proposal</p>
+    </div>
+      
+  </body>
+</html>
