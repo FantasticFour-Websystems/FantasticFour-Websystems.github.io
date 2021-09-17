@@ -1,4 +1,4 @@
-README.md for FTeam SET
+README.md for Team SET
 
 Collaborators:
 Emily Ngo (ngoe)
