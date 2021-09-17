@@ -1,9 +1,8 @@
-README.md for Fantastic Four
+README.md for FTeam SET
 
 Collaborators:
 Emily Ngo (ngoe)
 Tobey Tan (tant3) 
-Nicolas Morawski (morawn)
 Zijin Liu (liuz20) 
 
 Our group worked collaboratively on this lab and portfolio entirely on replit.com. The site allowed multiple users to edit files in real time and view the changes made to our webpage. 
