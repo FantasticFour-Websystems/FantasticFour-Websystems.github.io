@@ -2,26 +2,26 @@
 <tr>
   <td class="col">
   Quick Links:<br>
-  <a class="footlink"href="index.html">Home</a><br>
-  <a class="footlink" href="events.html">Events/Activities</a><br>
-  <a class="footlink"href="contact.html">Contact Us</a><br>
+  <a class="footlink"href="index.php">Home</a><br>
+  <a class="footlink" href="profile.php">Profile</a><br>
+  <a class="footlink"href="schedule.php">Schedule</a><br>
   </td>
 
   <td class="col">
   
-  Emails:<br>
-  <i class="fas fa-envelope-open ml-3\"></i><span>
-  <a class="footlink" href="href="mailto:INSERTHERE" class = "contact-button1" target="_blank"> President: smitha24@rpi.edu</a>
-  </span><br><i class="fas fa-envelope-open ml-3"></i><span>
-  <a class="footlink" href="href="mailto:INSERTHERE" class = "contact-button1"  target="_blank"> Organization: gammanueta@rpi.edu</a></span>
+  Contact the Developers:<br>
+  <span>
+  <a class="footlink" href="href="mailto:INSERTHERE" class = "contact-button1" target="_blank"> Emily Ngo: ngoe@rpi.edu</a>
+  </span><br><span>
+  <a class="footlink" href="href="mailto:INSERTHERE" class = "contact-button1"  target="_blank"> Tobey Tan: tant3@rpi.edu</a></span><br><span
+  <a class="footlink" href="href="mailto:INSERTHERE" class = "contact-button1"  target="_blank">Sherry Liu: liuz20@rpi.edu</a></span>
   </td>
 
   <td class="col">Social Media: <br>
-  <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-  <a href="#" class="social"><i class="fab fa-twitter"></i></a>
-  <a href="#" class="social"><i class="fab fa-tiktok"></i></a>
-  <a href="#" class="social"><i class="fab fa-instagram"></i></a>
-  <a href="#" class="social"><i class="fab fa-linkedin"></i></a>
+  <i class="fa fa-facebook-f"></i>
+  <i class="fa fa-twitter"></i>
+  <i class="fa fa-instagram"></i>
+  <i class="fa fa-linkedin"></i>
   </td>
 
 <tr>
