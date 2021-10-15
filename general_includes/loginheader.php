@@ -28,19 +28,6 @@
             <li class="nav-item">
               <a class="nav-link" href="#">SIGN OUT</a>
             </li>
-            <li class="nav-item dropdown dmenu">
-            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-              SOMETHING
-            </a>
-            <div class="dropdown-menu sm-menu">
-              <a class="dropdown-item" href="#.php">1</a>
-              <a class="dropdown-item" href="#.php">2</a>
-              <a class="dropdown-item" href="#.php">3</a>
-              <a class="dropdown-item" href="#.php">4</a>
-              <a class="dropdown-item" href="#">5</a>
-  
-            </div>
-          </li>
           <li class="nav-item">
             <a class="nav-link" href="contact_us.php">CONTACT US</a>
           </li>
