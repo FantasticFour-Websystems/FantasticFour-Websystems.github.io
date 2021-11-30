@@ -1,5 +1,11 @@
 
 <!------ Include the above in your HEAD tag ---------->
+
+<div id = "header">
+  <h1 id ="title">PRACT</h1>
+  <h3 id ="sub-title">Progress, Reminders, and Consultant Team</h3>
+</div>
+  
     <nav class="navbar navbar-expand-sm   navbar-light bg-light">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -8,33 +14,29 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="index.php">HOME <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link" href="team.php">DEVELOPERS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.php">LOG IN</a>
             </li>
             <li class="nav-item dropdown dmenu">
             <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-              Our Service
+              PROFILE
             </a>
             <div class="dropdown-menu sm-menu">
-              <a class="dropdown-item" href="#">service2</a>
-              <a class="dropdown-item" href="#">service 2</a>
-              <a class="dropdown-item" href="#">service 3</a>
+              <a class="dropdown-item" href="profile.php">PROFILE</a>
+              <a class="dropdown-item" href="schedule.php">SCHEDULE</a>
+              <a class="dropdown-item" href="group-profile.php">GROUP</a>
             </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Call</a>
-          </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact_us.php">CONTACT US</a>
+            </li>
           </ul>
-          <div class="social-part">
-            <i class="fa fa-facebook" aria-hidden="true"></i>
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-            <i class="fa fa-instagram" aria-hidden="true"></i>
-          </div>
         </div>
       </nav>
+  
 
