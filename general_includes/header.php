@@ -23,7 +23,7 @@
               <a class="nav-link" href="login.php">LOG IN</a>
             </li>
             <li class="nav-item dropdown dmenu">
-            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
               PROFILE
             </a>
             <div class="dropdown-menu sm-menu">
@@ -34,6 +34,9 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="contact_us.php">CONTACT US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="logout.php">LOG OUT</a>
             </li>
           </ul>
         </div>
