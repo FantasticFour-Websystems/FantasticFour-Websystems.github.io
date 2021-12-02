@@ -1,223 +1,107 @@
+<?php 
+  session_start();
+  if (isset($_SESSION['userid']) && isset($_SESSION['username'])) {
+?>
+
 <html>
  <head>
-      <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+   <title>Index Page</title>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,500i,700,800i" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <title>PHP Test</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <link rel="stylesheet" href="style_todolist.css">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,500i,700,800i" rel="stylesheet">
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
   <body>
-<?php include 'header.php';?>
-<div class="profile-info-brief p-3">
-    <div class="text-center">
-        <h5 class="text-uppercase mb-4">Jim Halpert</h5>
-    </div>
-</div>
+  <?php include 'general_includes/header.php';?>
+  <div class="profile-cover-img"><img src="https://bootdey.com/img/Content/flores-amarillas-wallpaper.jpeg" alt=""></div>
+        <div class="profile-info-brief p-3"><img class="img-fluid user-profile-avatar" src="resources/jim.png" alt="">
+            <div class="text-center">
+                <h5 class="text-uppercase mb-4"><?php echo $_SESSION['username']?></h5>
+            </div>
+        </div>
+
 <div class="container">
         <hr class="m-0">
 
-        <div class="profile-wrapper">
-            <div class="profile-section-user">
-                <!-- /.profile-info-brief -->
-                <div class="hidden-sm-down">
-                    <div class="profile-info-contact p-4">
-                        <table class="table">
-                            <tbody>
-                                <tr>
-                                    <td><strong>URL:</strong></td>
-                                    <td>
-                                        <p class="text-muted mb-0">jim.com</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><strong>EMAIL:</strong></td>
-                                    <td>
-                                        <p class="text-muted mb-0">jim@gmail.com</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><strong>PHONE:</strong></td>
-                                    <td>
-                                        <p class="text-muted mb-0">01145525755</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><strong>SKYPE:</strong></td>
-                                    <td>
-                                        <p class="text-muted mb-0">jimhalp</p>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+<div class="profile-wrapper">
+    <div class="profile-section-user">
+        <!-- /.profile-info-brief -->
+        <div class="hidden-sm-down">
+            <div class="profile-info-contact p-4">
+                <h6 class="mb-10">Reminders</h6>
+                <ul>
+                  <li>Finish Presentation</li>
+                  <li>Look over Project Proposal</li>
+                  <li>Meet with Dwight Schrute</li>
+                </ul>
+            </div>
+            <!-- /.profile-info-contact -->
+            <hr class="m-0">
+            <div class="profile-info-general p-4">
+                <h6 class="mb-10">Team Members</h6>
+                <ul>
+                  <li>Dwight Schrute</li>
+                  <li>Pamela Beesly</li>
+                  <li>Kevin Malone</li>
+                  <li>Andy Bernard</li>
+                </ul>
+            </div>
+            <!-- /.profile-info-general -->
+            <hr class="m-0">
+        </div>
+        <!-- /.hidden-sm-down -->
+    </div>
+    <!-- /.profile-section-user -->
+    <div class="profile-section-main" style = "margin-top: 4vh;">
+           <h6 class="mb-10">Recent Posts</h6>
+                <!-- /.post-editor -->
+                <div class="stream-posts">
+                    <div class="stream-post">
+                        <div class="sp-author">
+                            <a href="#" class="sp-author-avatar"><img src="resources/dwight.png" alt=""></a>
+                            <h6 class="sp-author-name"><a href="#">Dwight Schrute</a></h6></div>
+                        <div class="sp-content">
+                            <div class="sp-info">posted 1h ago</div>
+                            <p class="sp-paragraph mb-0">Auk Soldanella plainscraft acetonylidene wolfishness irrecognizant Candolleaceae provision Marsipobranchii arpen Paleoanthropus supersecular inidoneous autoplagiarism palmcrist occamy equestrianism periodontoclasia mucedin overchannel goelism decapsulation pourer zira</p>
+                        </div>
+                        <!-- /.sp-content -->
                     </div>
-                    <!-- /.profile-info-general -->
-                    <hr class="m-0">
+                    <!-- /.stream-post -->
+                    <div class="stream-post mb-0">
+                        <div class="sp-author">
+                            <a href="#" class="sp-author-avatar"><img src="resources/pam.png" alt=""></a>
+                            <h6 class="sp-author-name"><a href="#">Pam Beesly</a></h6></div>
+                        <div class="sp-content">
+                            <div class="sp-info">posted 2 days ago</div>
+                            <p class="sp-paragraph">Auk Soldanella plainscraft acetonylidene wolfishness irrecognizant Candolleaceae provision Marsipobranchii arpen Paleoanthropus supersecular inidoneous</p>
+                            <p class="sp-paragraph">autoplagiarism palmcrist occamy equestrianism periodontoclasia mucedin overchannel goelism decapsulation pourer zira</p>
+                        </div>
+                        <!-- /.sp-content -->
+                    </div>
+                    <!-- /.stream-post -->
                 </div>
-                <!-- /.hidden-sm-down -->
+                <!-- /.stream-posts -->
             </div>
-          </div>
-          <div class="todolist_content">
-            <?php
-                // initialize errors variable
-              $errors = "";
-              // connect to database
-              $db = mysqli_connect("localhost", "root", "Sherry0924", "final_project");
-
-              // insert a quote if submit button is clicked
-              if (isset($_POST['submit'])) {
-                if (empty($_POST['task'])) {
-                  $errors = "*You must fill in the task";
-                }else{
-                  $task = $_POST['task'];
-                  $sql = "INSERT INTO task (task) VALUES ('$task')";
-                  mysqli_query($db, $sql);
-                  header('location: index.php');
-                }
-              }
-              if (isset($_GET['del_task'])) {
-            $id = $_GET['del_task'];
-
-            mysqli_query($db, "DELETE FROM task WHERE id=".$id);
-            header('location: index.php');
-          }
-
-          ?>
-            <!-- h1>Lorem5 press tab -->
-            <div class="container">
-              <div class="row justify-content-center">
-
-            <ul>
-                <li>
-
-                    <div class="content">
-
-                      <p class="title"><b>TO DO LIST:</b></p>
-
-                      <form method="post" action="index.php" class="input_form">
-                        <?php if (isset($errors)) { ?>
-                      <p><?php echo $errors; ?></p>
-                    <?php } ?>
-
-                          <input type="text" name="task" class="task_input">
-                          <button type="submit" name="submit" id="add_btn" class="add_btn">Add Task</button>
-
-                      </form><p style="font-size:10px;color:red;">*Click Task name to mark it done.</p>
-                      <center>
-                      <table>
-                          <thead>
-                              <tr>
-                                  <th>No.</th>
-                                  <th>Tasks</th>
-                                  <th style="width: 60px;">Action</th>
-                              </tr>
-                          </thead>
-
-                          <tbody>
-                              <?php
-                              // select all tasks if page is visited or refreshed
-                              $tasks = mysqli_query($db, "SELECT * FROM task");
-                              $i = 1; 
-                              while ($row = mysqli_fetch_array($tasks)) { ?>
-                                  <tr>
-                                      <td class="number" width="10"> <?php echo $i; ?> </td>
-                                      <td class="task"> <?php echo $row['task']; ?> </td>
-                                      <td class="action">
-                                          <a href="index.php?del_task=<?php echo $row['id'] ?>" >Remove</a>
-                                      </td>
-                                  </tr>
-                                  <?php $i++; } ?>
-                          </tbody>
-                      </table></center>
-
-                      </div>
-                </li>
-              </ul>
-            </div>
-          </div>
+        </div>
+        <!-- /.tab-content -->
     </div>
-    <div class="container">
-              <div class="row justify-content-center">
+    <!-- /.profile-section-main -->
 
-            <ul>
-                <li>
-
-                    <div class="content">
-
-                      <p class="title"><b>Work from Admin:</b></p>
-
-                      <form method="post" action="index.php" class="input_form">
-                        <?php if (isset($errors)) { ?>
-                      <p><?php echo $errors; ?></p>
-                    <?php } ?>
-
-                          <input type="text" name="task" class="task_input">
-                          <button type="submit" name="submit" id="add_btn" class="add_btn">Add Task</button>
-
-                      </form><p style="font-size:10px;color:red;">*Click Task name to mark it done.</p>
-                      <center>
-                      <table>
-                          <thead>
-                              <tr>
-                                  <th>No.</th>
-                                  <th>Tasks</th>
-                                  <th style="width: 60px;">Action</th>
-                              </tr>
-                          </thead>
-
-                          <tbody>
-                              <?php
-                              // select all tasks if page is visited or refreshed
-                              $tasks = mysqli_query($db, "SELECT * FROM task");
-                              $i = 1; 
-                              while ($row = mysqli_fetch_array($tasks)) { ?>
-                                  <tr>
-                                      <td class="number" width="10"> <?php echo $i; ?> </td>
-                                      <td class="task"> <?php echo $row['task']; ?> </td>
-                                      <td class="action">
-                                          <a href="index.php?del_task=<?php echo $row['id'] ?>" >Remove</a>
-                                      </td>
-                                  </tr>
-                                  <?php $i++; } ?>
-                          </tbody>
-                      </table></center>
-
-                      </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-    </div>
-  </div>
   <?php include 'general_includes/footer.php';?>
   </body>
-  <script>
-
-// Add a "checked" symbol when clicking on a list item
-$(function(){
-  var $curParent, Content;
-  $(document).delegate("td.task","click", function(){
-    if($(this).closest("s").length) {
-      Content = $(this).parent("s").html();
-      $curParent = $(this).closest("s");
-      $(Content).insertAfter($curParent);
-      $(this).closest("s").remove();
-    }
-    else {
-      $(this).wrapAll("<s />");
-    }
-  });
-});
-
-
-</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </html>
+
+<?php 
+} else {
+  header("Location: login.php");
+  exit();
+}
+?>
