@@ -1,11 +1,31 @@
+
+.discussion-body{
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+/*-------------------GENERAL CSS STUFF-----------------------------------------------------------------------*/
+
+.main-text{
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+  background-color: white;
+}
+
+body{
+ background-color: #ddb8a6;
+}
+
+/*-------------------------------------------------------------------------------------------------------------*/
+
 #footer{
   height: 20vh;  
-  background-color: #f1c5a3;
-  z-index: -11;
+  background-color: #7b876d;
   color: white;
   display: -webkit-box;
-  padding-top: 5vh;
-  width: 100vw;
+  padding-top: 3vh;
   padding-left: 10vw;
   padding-right: 10vw;
 } 
@@ -76,7 +96,13 @@
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
 }
+/*INDEX---------------------------------------------------------------------------------------------------------------------*/
 
+
+#i-table{
+  width: 100%;
+  height: 60vw;
+}
 
 /*LOGIN FORM -------------------------------------------------------*/
 
@@ -136,7 +162,7 @@ h2.active {
 
 /* FORM TYPOGRAPHY*/
 
-input[type=button], input[type=submit], input[type=reset]  {
+input1[type=button], input1[type=submit], input1[type=reset]  {
   background-color: #56baed;
   border: none;
   color: white;
@@ -158,11 +184,11 @@ input[type=button], input[type=submit], input[type=reset]  {
   transition: all 0.2s ease-in-out;
 }
 
-input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
+#login input[type=button]:hover, #login input[type=submit]:hover, input[type=reset]:hover  {
   background-color: #39ace7;
 }
 
-input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
+#login input[type=button]:active, #login input[type=submit]:active, #login input[type=reset]:active  {
   -moz-transform: scale(0.95);
   -webkit-transform: scale(0.95);
   -o-transform: scale(0.95);
@@ -170,7 +196,7 @@ input[type=button]:active, input[type=submit]:active, input[type=reset]:active  
   transform: scale(0.95);
 }
 
-input[type=text] {
+#login input[type=text] {
   background-color: #f6f6f6;
   border: none;
   color: #0d0d0d;
@@ -191,12 +217,12 @@ input[type=text] {
   border-radius: 5px 5px 5px 5px;
 }
 
-input[type=text]:focus {
+#login input[type=text]:focus {
   background-color: #fff;
   border-bottom: 2px solid #5fbae9;
 }
 
-input[type=text]:placeholder {
+#login input[type=text]:placeholder {
   color: #cccccc;
 }
 
@@ -355,7 +381,8 @@ body.menubar-top .profile-wrapper {
     border-right: 1px solid #eceeef;
     -webkit-box-flex: 0;
     -ms-flex: 0 0 100%;
-    flex: 0 0 100%
+    flex: 0 0 100%;
+    margin-top: 1.9vh;
 }
 
 @media (min-width:768px) {
@@ -382,6 +409,10 @@ body.menubar-top .profile-wrapper {
     padding-right: 0
 }
 
+
+
+
+}
 .profile-section-user .img-gallery [class*=col] {
     padding-right: .25rem;
     padding-left: .25rem
@@ -398,7 +429,8 @@ body.menubar-top .profile-wrapper {
 
 .profile-cover-img img {
     width: 100%;
-    height: auto
+    height: 30vh;
+    object-fit: cover;
 }
 
 .profile-info-brief {
@@ -411,7 +443,7 @@ body.menubar-top .profile-wrapper {
     height: 100px;
     border-radius: 100%;
     position: absolute;
-    top: -50px;
+    top: -150px;
     left: calc(50% - 50px)
 }
 
@@ -633,4 +665,345 @@ body.menubar-top .profile-wrapper {
     bottom: 32px
 }
 
-/*------------------------------------------------------------------------------------------------------------------*/
+/*----------HEADER---------------------------------------------*/
+
+#header{
+  height: 27vh;  
+  padding-top: 7vh;
+  background-color: #7b876d;
+  z-index: -11;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  color: white;
+}
+#title{
+  text-transform: bold;
+  font-size: 3em;
+  font-family: 'Playfair Display';
+}
+
+#title:after {
+  display:block;
+  content: '';
+  border-bottom: solid 3px #92b1b6;  
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+}
+#title:hover:after { transform: scaleX(1); }
+
+#sub-title{
+  font-family: 'Poiret One';
+}
+
+/*-----------------------------------------------------------------------*/
+
+/*================================================================*/
+/*PREVIOUS WORKS*/
+.pw-table{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pw-row {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10vw;
+  text-align: center;
+
+}
+
+.pw-col{
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+  width: 33vw;
+  height: 40vw;
+}
+
+.pw-pic{
+  height: 20vw;
+  width: 25vw;
+}
+
+figcaption{
+  width: 25vw;
+  height: 10vw;
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+  text-justify: inter-word;
+}
+
+/*================================================================*/
+/*TEAM PROGRESS*/
+
+.tp{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#task{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+ 
+}
+
+#bar{
+  margin-bottom: 2em;
+  margin-top: 5vw;
+  width: 70%;
+}
+
+/*/================================================================TEAM MEMBER*/ 
+.profilePic{
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  margin: 0 0 0 0;
+}
+
+.tm-table {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+
+}
+
+.tbody{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.tm-row {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5vw;
+  text-align: center;
+  
+}
+.tm-col {
+  margin-left: auto;
+  margin-right: auto;
+  text-align:center;
+  height: 20vw;
+  width: 50vw;
+}
+//Team table
+#events-table {
+  width: 80vw;
+  margin-top: 10vh;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  border-collapse:separate; 
+  border-spacing: 0 2em; 
+}
+
+#events-table img{
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  width: 25vw;
+  height: 18vw;
+}
+
+#events-table .gray {
+  width: 100vw;
+  margin-top: 5vw;
+  margin-bottom:5vw;
+  //background-color: #D3D3D3;
+}
+
+#events-table .col1{
+  width: 45vw;
+  //text-align: left;
+  padding: 20px;
+}
+#events-table .col2{
+  width: 45vw;
+  //text-align: right;
+  padding: 20px;
+}
+
+#events-table .colimg{
+  width: 45vw;
+  //text-align: center;
+  padding: 20px;
+}
+
+#events-table td + td {
+  border-left: 4px solid white;
+}
+
+.text-back {
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.514);
+}
+
+
+/*schedule*/
+/* Include the padding and border in an element's total width and height */ * {
+  box-sizing: border-box;
+}
+
+/* Remove margins and padding from the list */
+#myUL {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the list items */
+#myUL li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+#myUL li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ #myUL li:hover {
+  background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+#myUL li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+#myUL li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+ .close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Style the header */
+ .header {
+  background-color: #555;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+/* Clear floats after the header */
+ .header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+ input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Style the "Add" button */
+#myDIV .addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+#myDIV .addBtn:hover {
+  background-color: #bbb;
+}
+
+.field {
+  margin-left: 65px;
+  width: 10%;
+  position: relative;
+  /* margin: 0 auto; */
+  float: left;
+}
+
+.value {
+  width: 85%;
+  float: left;
+  /* margin: 0 auto; */
+  margin-bottom: 10px;
+}
+
+#contact {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.formData {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#submit {
+  margin-left: 72%;
+  /* position: relative; */
+  width: 100px;
+  border-radius: 12px;
+}
+
+#submit:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.mb-10{
+  width: 10vw;
+  height: 2vw;
+  text-align: center;
+  vertical-align: middle;
+  background-color: gray;
+  color: white;
+
+}
