@@ -36,21 +36,38 @@ echo '<h2>Create a topic</h2>';
             }
             else
             {
+                echo '<form method="post" action="" style = "padding-left: 30px; padding-right: 30px;">
+                    <div class="row mb-3">
+                        <label for="inputSubject" class="col-sm-2 col-form-label">Subject</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="inputEmail" placeholder="Subject">
+                        </div>
+                    </div>
+                    
+                    <div class="row mb-3">
+                    <label  class="col-sm-2 col-form-label" for="inputCategory">Category</label>                        
+                    <div class="col-sm-10">';
+                    
+                    
 
-                echo '<form method="post" action="">
-                    Subject: <input type="text" name="topic_subject" />
-                    Category:';
-
-                echo '<select name="topic_cat">';
+                echo '<select name="topic_cat" style = "inline-block">';
                     while($row = mysqli_fetch_assoc($result))
                     {
                         echo '<option value="' . $row['cat_id'] . '">' . $row['cat_name'] . '</option>';
                     }
-                echo '</select>';
+                echo '</select> </div> </div>';
+                echo '<div class="row mb-3">
+                    <label class="col-sm-2 col-form-label" for="inputMessage">Message</label>
 
-                echo 'Message: <textarea name="post_content" /></textarea>
-                    <input type="submit" value="Create topic" />
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" name = "post_content" placeholder="Submit content as the first post under this topic!">
+                      </div>
+                      </div>
+                
+                    <input class="btn btn-primary" type="submit" style = "width: 12vw; float: right;" value="SUBMIT TOPIC" /><br><br>
                  </form>';
+                
+            
             }
         }
     }

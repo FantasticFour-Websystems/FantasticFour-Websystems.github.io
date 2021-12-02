@@ -94,5 +94,4 @@ else
         }
     }
 }
-include 'footer.php';
 ?>
