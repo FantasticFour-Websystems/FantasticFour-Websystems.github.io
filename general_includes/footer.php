@@ -2,7 +2,7 @@
 <tr>
   <td class="col">
   Quick Links:<br>
-  <a class="footlink"href="index.php">Home</a><br>
+  <a class="footlink" href="index.php">Home</a><br>
   <a class="footlink" href="profile.php">Profile</a><br>
   <a class="footlink"href="schedule.php">Schedule</a><br>
   </td>
@@ -11,10 +11,12 @@
   
   Contact the Developers:<br>
   <span>
-  <a class="footlink" href="href="mailto:INSERTHERE" class = "contact-button1" target="_blank"> Emily Ngo: ngoe@rpi.edu</a>
-  </span><br><span>
-  <a class="footlink" href="href="mailto:INSERTHERE" class = "contact-button1"  target="_blank"> Tobey Tan: tant3@rpi.edu</a></span><br><span
-  <a class="footlink" href="href="mailto:INSERTHERE" class = "contact-button1"  target="_blank">Sherry Liu: liuz20@rpi.edu</a></span>
+  <a class="footlink" href="mailto:INSERTHERE" class = "contact-button1" target="_blank"> Emily Ngo: ngoe@rpi.edu</a>
+  </span><br>
+ <span>
+  <a class="footlink" href="mailto:INSERTHERE" class = "contact-button1"  target="_blank"> Tobey Tan: tant3@rpi.edu</a></span><br>
+  <span>
+  <a class="footlink" href="mailto:INSERTHERE" class = "contact-button1"  target="_blank">Sherry Liu: liuz20@rpi.edu</a></span>
   </td>
 
   <td class="col">Social Media: <br>
