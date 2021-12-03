@@ -104,6 +104,188 @@ body{
   height: 60vw;
 }
 
+#todolist_hight{
+  height: 700px;
+}
+
+.todolist{
+  font-family: Sans-Serif;
+  position:absolute;
+  height: 600px;
+  left: 550px;
+  top:250px;
+}
+.todolist .title{
+  /*font-family: 'Rock Salt', cursive;*/
+
+}
+.todolist h2,p{
+  font-size:100%;
+  font-weight:normal;
+}
+.todolist ul,li{
+  list-style:none;
+}
+.todolist ul{
+  overflow:hidden;
+  padding:3em;
+}
+.todolist ul li div.content{
+  text-decoration:none;
+  color:#000;
+  background:#ffc ;
+  display:block;
+  height:100%;
+  width:40em;
+  padding:5em;
+  -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+  -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  -moz-transition:-moz-transform .15s linear;
+  -o-transition:-o-transform .15s linear;
+  -webkit-transition:-webkit-transform .15s linear;
+}
+.todolist ul li{
+  margin:1em;
+  float:left;
+}
+.todolist ul li h2{
+  font-size:140%;
+  font-weight:bold;
+  padding-bottom:10px;
+}
+.todolist ul li p{
+  font-family: Sans-Serif;
+  font-size:100%;
+}
+.todolist ul li div.content{
+  box-shadow:10px 10px 7px rgba(0,0,0,.7);
+  -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
+  -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  position:relative;
+  z-index:5;
+}
+.todolist ol{text-align:center;}
+.todolist ol li{display:inline;padding-right:1em;}
+.todolist ol li div.content{color:#fff;}
+
+.todolist form {
+  width: 90%;
+  margin: 30px auto;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid black;
+  font-size: 10px;
+
+}
+.todolist .task_input {
+  width: 75%;
+  height: 30px;
+  padding: 2px 20px;
+  border: 2px solid black;
+  font-family: Sans-Serif;
+  background:#ffc ;
+  font-size: 16px;
+
+}
+.todolist  .add_btn {
+  height: 30px;
+  background: #404040 ;
+  color:  white;
+  padding: 5px 20px;
+  border-style: none;
+  border-radius: 10px;
+}
+
+.todolist table {
+  width:80%;
+}
+
+
+/* Style the list items */
+.todolist td {
+  cursor: pointer;
+  position: relative;
+  padding: 1px 8px 1px 8px;
+  list-style-type: none;
+  font-size: 12px;
+  transition: 0.2s;
+  text-align: left;
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+/* Set all odd list items to a different color (zebra-stripes) */
+.todolist td.task:nth-child(odd) {
+   color: red;
+   border-style: hidden;
+   font-family: Sans-Serif;
+
+}
+
+/* Darker background-color on hover */
+.todolist td:hover {
+  background:#ffc ;
+}
+
+/* When clicked on, add a background color and strike out text */
+.todolist td.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+.todolist a{
+  color:red;
+}
+.todolist a:hover{
+  color:black;
+  background:#ffc ;
+
+}
+/* Add a "checked" mark when clicked on */
+.todolist td.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+  }
+
+/* Style the close button */
+.todolist .close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.todolist .close:hover {
+  background-color: #f44336;
+  color: white;
+}
+.todolist thead{
+  text-align: center;
+}
+.todolist td.action{
+  color:red;
+}
+.todolist td.task{
+  font-family: Georgia, serif;
+}
+
+
 /*LOGIN FORM -------------------------------------------------------*/
 
 /*LOGIN FORM.....................................*/
