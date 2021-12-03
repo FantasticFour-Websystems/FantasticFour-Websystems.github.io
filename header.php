@@ -17,9 +17,6 @@
               <a class="nav-link" href="index.php">HOME <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="team.php">DEVELOPERS</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="login.php">LOG IN</a>
             </li>
             <li class="nav-item dropdown dmenu">
