@@ -46,7 +46,17 @@
                                 <tr>
                                     <td><strong>GROUP NAME:</strong></td>
                                     <td>
-                                        <p class="text-muted mb-0">Four</p>
+                                        <p class="text-muted mb-0">
+                                            <?php 
+                                            $sql = "SELECT `gname` FROM `group` WHERE group_id = $group_id";
+                                            $res = $db->query($sql);
+                                            $num = $res->num_rows;
+                                            for ($i=0; $i < $num; $i++) {
+                                                $data = $res->fetch_assoc();
+                                                echo $data["gname"];
+                                            }
+                                            ?>
+                                        </p>
                                     </td>
                                 </tr>
                                 <tr>
