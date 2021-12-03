@@ -5,7 +5,7 @@
 $server = 'localhost';
 $username   = 'root';
 $password   = '';
-$database   = 'test_db';
+$database   = 'pract';
 
 // Create connection
 $conn = new mysqli($server, $username, $password);

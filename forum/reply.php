@@ -10,13 +10,14 @@ if($_SERVER['REQUEST_METHOD'] != 'POST')
 }
 else
 {
+      $_SESSION['user_id']= 2;
     //check for sign in status
-    if(!$_SESSION['signed_in'])
-    {
-        echo 'You must be signed in to post a reply.';
-    }
-    else
-    {
+    //if(!$_SESSION['signed_in'])
+    //{
+      //  echo 'You must be signed in to post a reply.';
+    //}
+    //else
+    //{
         //a real user posted a real reply
         $sql = "INSERT INTO
                     posts(post_content,
@@ -26,7 +27,7 @@ else
                 VALUES ('" . $_POST['reply-content'] . "',
                         NOW(),
                         " . mysqli_real_escape_string($conn, $_GET['id']) . ",
-                        " . $_SESSION['userid'] . ")";
+                        " . $_SESSION['user_id'] . ")";
 
         $result = mysqli_query($conn, $sql);
 
@@ -38,7 +39,7 @@ else
         {
             echo 'Your reply has been saved, check out <a href="topic.php?id=' . htmlentities($_GET['id']) . '">the topic</a>.';
         }
-    }
+    //}
 }
 include 'footer.php';
 ?>
