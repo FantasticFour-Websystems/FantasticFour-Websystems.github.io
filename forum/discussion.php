@@ -1,33 +1,12 @@
-<html>
- <head>
-      <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <title>PHP Test</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="style.css">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,500i,700,800i" rel="stylesheet">
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</head>
-  <body>
-
-
 <?php
 //index.php
-include '../general_includes/header.php';
 include 'header.php';
 ?>
-
-<h3>ITEMS</h3>
-<table id="newTable">
+    
+<h3>Discussion Topics</h3>
 <?php
  $dbOk = false;
-  @ $db = new mysqli('localhost', 'root', '', 'new_pract');
+  @ $db = new mysqli('localhost', 'root', '', 'pract');
   if ($db->connect_error) {
     echo '<div class="messages">Could not connect to the database. Error: ';
     echo $db->connect_errno . ' - ' . $db->connect_error . '</div>';
@@ -40,30 +19,53 @@ include 'header.php';
     $query = 'SELECT  *
    FROM categories
    INNER JOIN topics
-   ON categories.cat_id = topics.topic_cat;';
+   ON categories.cat_id = topics.topic_cat order by categories.cat_id';
     $result = $db->query($query);
     $numRecords = $result->num_rows;
     
-    echo '<tr><th>Category:</th><th>Topic:</th></tr>';
-    for ($i=0; $i < $numRecords; $i++) {
-      $record = $result->fetch_assoc();
-      if ($i % 2 == 0) {
-        echo "\n".'<tr id="iden-' . $record['cat_id'] . '"><td>';
-      } else {
-        echo "\n".'<tr class="odd" id="iden-' . $record['cat_id'] . '"><td>';
-      }
-      echo htmlspecialchars($record['cat_name']);
-      echo '</td><td>';
-      echo ('<a href="topic.php?id=' . $record['topic_id']. '">' . $record['topic_subject'] .'</a>'  );
-      echo '</td></tr>';
+    echo '<div class="m-4">
+    <div class="accordion" id="myAccordion">';
+    if ($numRecords > 0){
+        $record = $result->fetch_assoc();
+        $var_cat = $record['cat_id'];
+        //initialize first category section
+        echo '<div class="accordion-item">
+            <h2 class="accordion-header" id="heading'. $record['cat_id'] .'">
+                <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse'. $record['cat_id'] .'">'. $record['cat_name'] .'</button>	
+            </h2>
+            <div id="collapse'. $record['cat_id'] .'" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                <div class="card-body">';
+          for ($i=0; $i < $numRecords; $i++) {
+              if ($i>0){
+                  $record = $result->fetch_assoc();
+              }
+              if ($record['cat_id'] == $var_cat){
+                  //just add in the subcategory
+                  echo ('<a href="topic.php?id=' . $record['topic_id']. '">' . $record['topic_subject'] .'</a><br>'  );
+              }
+              else{ 
+               $var_cat = $record['cat_id'];
+                //make a new category section
+                echo ' </div></div></div><div class="accordion-item">
+                <h2 class="accordion-header" id="heading'. $record['cat_id'] .'">
+                    <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapse'. $record['cat_id'] .'">'. $record['cat_name'] .'</button>	
+                </h2>
+                <div id="collapse'. $record['cat_id'] .'" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
+                    <div class="card-body">';
+                 echo ('<a href="topic.php?id=' . $record['topic_id']. '">' . $record['topic_subject'] .'</a><br>'  );
+                      
+              }
+        }
+        echo '</div>
+            </div>
+        </div>';
+        } 
     }
-    }
+    echo ' </div> </div>';
       
 ?>
-</table>
+
 
 <?php
-include '../general_includes/footer.php';
+include 'footer.php';
 ?>
-  </body>
-</html>

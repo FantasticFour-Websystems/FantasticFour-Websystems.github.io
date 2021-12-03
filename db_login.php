@@ -39,8 +39,8 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
                 $_SESSION['username'] = $row['username'];
                 $_SESSION['fname'] = $row['fname'];
                 $_SESSION['lname'] = $row['lname'];
-                $_SESSION['userid'] = $row['userid'];
-                $_SESSION['userid'] = $row['userid'];
+                $_SESSION['user_id'] = $row['user_id'];
+                $_SESSION['group_id'] = $row['group_id'];
                 $_SESSION['is_admin'] = $row['is_admin'];
                 $_SESSION['phone'] = $row['phone'];
                 $_SESSION['email'] = $row['email'];

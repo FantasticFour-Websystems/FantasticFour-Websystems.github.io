@@ -50,13 +50,13 @@ if(isset($_POST["admin_signup"])) {
         foreach ($res as $row){
             $count = $row["group_count"]+1;
         }
-        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+        $hashed_password = password_hash($pass, PASSWORD_DEFAULT);
 
-        $sql = "INSERT INTO `users` (`userid`, `username`, `password`, `is_admin`, `group_id`, `fname`, `lname`, `email`, `phone`) 
+        $sql = "INSERT INTO `users` (`user_id`, `username`, `password`, `is_admin`, `group_id`, `fname`, `lname`, `email`, `phone`) 
         VALUES (NULL,'$user','$hashed_password','1','$count','$first','$last','$email','$phone')";
         $query = $dbconn->query($sql);
 
-        $sql = "SELECT userid FROM `users` WHERE `group_id` = $count";
+        $sql = "SELECT `user_id` FROM `users` WHERE `group_id` = '$count'";
         $query = $dbconn->query($sql);
         $res = $query->fetchAll();
         $adminid;
@@ -75,12 +75,13 @@ if(isset($_POST["admin_signup"])) {
 <html>
  <head>
   <title>Sign Up</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="login.css" rel="stylesheet" type="text/css" />
 </head>
   <body>
+  <div id = "header">
+  <h1 id ="title">PRACT</h1>
+  <h3 id ="sub-title">Progress, Reminders, and Consultant Team</h3>
+</div>
   <div class="form_title">
   <div class="wrapper fadeInDown">
   <h3>Register and Create Your Account</h3>
@@ -95,8 +96,7 @@ if(isset($_POST["admin_signup"])) {
 
         <!-- Login Form -->
         <form id = "login" action="register_admin.php" method="post">
-        <label for="gname">Create a Group:</label>  
-        <input type="text" id="password" class="fadeIn second" name="gname" placeholder="enter a group name">
+        <input type="text" id="password" class="fadeIn second" name="gname" placeholder="Enter a Group Name">
         <input type="text" id="username" class="fadeIn second" name="username" placeholder="Username">
         <input type="text" id="password" class="fadeIn second" name="password" placeholder="Password">
           <input type="text" id="username" class="fadeIn second" name="fname" placeholder="First Name">

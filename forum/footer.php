@@ -1,11 +1,44 @@
-
+</div>
 </div><!-- content -->
 </div><!-- wrapper -->
 <div id="wrapper">
-<div id="footer">
- 
+
+    <table id = "footer">
+    <tr>
+      <td class="col">
+      Quick Links:<br>
+      <a class="footlink" href="index.php">Home</a><br>
+      <a class="footlink" href="profile.php">Profile</a><br>
+      <a class="footlink"href="schedule.php">Schedule</a><br>
+      </td>
+
+      <td class="col">
+
+      Contact the Developers:<br>
+      <span>
+      <a class="footlink" href="mailto:INSERTHERE" class = "contact-button1" target="_blank"> Emily Ngo: ngoe@rpi.edu</a>
+      </span><br>
+     <span>
+      <a class="footlink" href="mailto:INSERTHERE" class = "contact-button1"  target="_blank"> Tobey Tan: tant3@rpi.edu</a></span><br>
+      <span>
+      <a class="footlink" href="mailto:INSERTHERE" class = "contact-button1"  target="_blank">Sherry Liu: liuz20@rpi.edu</a></span>
+      </td>
+
+      <td class="col">Social Media: <br>
+      <i class="fa fa-facebook-f"></i>
+      <i class="fa fa-twitter"></i>
+      <i class="fa fa-instagram"></i>
+      <i class="fa fa-linkedin"></i>
+      </td>
+
+    <tr>
+    </table>
+
+    
 </div>
-</div>
+
+
+
 </body>
 
 </html>
