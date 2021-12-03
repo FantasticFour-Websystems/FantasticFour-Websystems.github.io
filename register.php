@@ -45,9 +45,9 @@ if(isset($_POST["signup"])) {
         exit();
     } else {
         $hashed_password = password_hash($pass, PASSWORD_DEFAULT);
-        
 
-        $sql = "INSERT INTO `users` (`userid`, `username`, `password`, `is_admin`, `group_id`, `fname`, `lname`, `email`, `phone`) 
+
+        $sql = "INSERT INTO `users` (`user_id`, `username`, `password`, `is_admin`, `group_id`, `fname`, `lname`, `email`, `phone`) 
         VALUES (NULL,'$user','$hashed_password','0','$group','$first','$last','$email','$phone')";
         $query = $dbconn->query($sql);
         header("Location: login.php");
@@ -62,12 +62,13 @@ if(isset($_POST["signup"])) {
 <html>
  <head>
   <title>Sign Up</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="login.css" rel="stylesheet" type="text/css" />
 </head>
   <body>
+  <div id = "header">
+  <h1 id ="title">PRACT</h1>
+  <h3 id ="sub-title">Progress, Reminders, and Consultant Team</h3>
+</div>
   <div class="form_title">
   <div class="wrapper fadeInDown">
   <h3>Register and Create Your Account</h3>
@@ -82,13 +83,13 @@ if(isset($_POST["signup"])) {
         <!-- Login Form -->
         <form id = "login" action="register.php" method="post">
             <label for="group">Choose the group to join</label>  
-            <select name="group" id="groups">
+            <select class="sel_user" name="group" id="groups">
                 <?php 
                 $sql = "SELECT * FROM `group`";
                 $query = $dbconn->query($sql);
                 $res = $query->fetchAll();
                 foreach ($res as $row){
-                  echo "<option value =\"" . $row["group_id"] ."\">" . $row["gname"] . " | group id:" . $row["group_id"] ."</option>"; 
+                  echo "<option class=\"opt\" value =\"" . $row["group_id"] ."\">" . $row["gname"] . "</option>"; 
                 }
                 ?>
             </select>
@@ -97,14 +98,12 @@ if(isset($_POST["signup"])) {
           <input type="text" id="username" class="fadeIn second" name="fname" placeholder="First Name">
           <input type="text" id="password" class="fadeIn third" name="lname" placeholder="Last Name">
           <input type="text" id="username" class="fadeIn third" name="email" placeholder="Email">
-          <input type="text" id="password" class="fadeIn third" name="phone"  maxlength="10" placeholder="Phone">
+          <input type="text" id="password" class="fadeIn fourth" name="phone"  maxlength="10" placeholder="Phone">
           <a href="#"><input type="submit" class="fadeIn fourth" name="signup" value="Sign Up"></a>
           </br>
         </form>
 
         <div id="formFooter">
-        
-        <a class="underlineHover" href="#">Forgot Password?</a>
         <a class="underlineHover" href="register_admin.php">Sign Up as a Group Admin</a>
         </div>
 

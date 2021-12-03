@@ -20,20 +20,19 @@
               <a class="nav-link" href="team.php">DEVELOPERS</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="login.php">LOG IN</a>
-            </li>
-            <li class="nav-item dropdown dmenu">
-            <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
-              PROFILE
-            </a>
-            <div class="dropdown-menu sm-menu">
-              <a class="dropdown-item" href="profile.php">PROFILE</a>
-              <a class="dropdown-item" href="schedule.php">SCHEDULE</a>
-              <a class="dropdown-item" href="group-profile.php">GROUP</a>
-            </div>
+              <a class="nav-link" href="contact_us.php">CONTACT US</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact_us.php">CONTACT US</a>
+              <a class="nav-link" href="discussion.php">DISCUSSION</a>
+            </li>
+              
+            <?php 
+            if ($_SESSION["is_admin"] == 1) {
+              echo "<a class=\"nav-link\" href=\"administrator.php\">ADMIN</a>";
+            }
+            ?>
+
+            
             </li>
             <li class="nav-item">
               <a class="nav-link" href="logout.php">LOG OUT</a>
