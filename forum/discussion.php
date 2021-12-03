@@ -2,9 +2,10 @@
 //index.php
 session_start();
 include 'header.php';
+$group = $_SESSION["group_id"];
 ?>
     
-<h3>Discussion Topics</h3>
+
 <?php
  $dbOk = false;
   @ $db = new mysqli('localhost', 'root', '', 'pract');
@@ -16,7 +17,27 @@ include 'header.php';
   }
     
   if ($dbOk) {
-      
+    echo "<h3 style=\"text-align:center\">";
+    $g = "SELECT gname FROM `group` where group_id = $group";
+    $qg = $db->query($g);
+
+    foreach ($qg as $u) {
+        echo "Group Name: ". $u["gname"];
+    }
+    echo "</h3>";
+    echo "<h5>Team Members:</h5>";
+    $sql_users = "SELECT * FROM `users` where group_id = $group";
+    $u = $db->query($sql_users);
+    $num = $u->num_rows;
+    for ($i=0; $i < $num; $i++) {
+        $data = $u->fetch_assoc();
+        echo $data["fname"] . " " . $data["lname"] . " | Email: ". $data["email"]." | Phone: ". $data["phone"]."</br>";
+    }
+    echo "</br>";
+    ?>
+    <h3>Discussion Topics</h3>
+
+    <?php
     $query = 'SELECT  *
    FROM categories
    INNER JOIN topics
