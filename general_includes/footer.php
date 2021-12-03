@@ -3,8 +3,8 @@
   <td class="col">
   Quick Links:<br>
   <a class="footlink"href="index.php">Home</a><br>
-  <a class="footlink" href="profile.php">Profile</a><br>
-  <a class="footlink"href="schedule.php">Schedule</a><br>
+  <a class="footlink" href="discussion.php">DISCUSSION</a><br>
+  <a class="footlink"href="logout.php">LOGOUT</a><br>
   </td>
 
   <td class="col">
