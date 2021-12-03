@@ -17,13 +17,10 @@
               <a class="nav-link" href="index.php">HOME <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="team.php">DEVELOPERS</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="contact_us.php">CONTACT US</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="discussion.php">DISCUSSION</a>
+              <a class="nav-link" href="forum/discussion.php">DISCUSSION</a>
             </li>
               
             <?php 
@@ -31,8 +28,6 @@
               echo "<a class=\"nav-link\" href=\"administrator.php\">ADMIN</a>";
             }
             ?>
-
-            
             </li>
             <li class="nav-item">
               <a class="nav-link" href="logout.php">LOG OUT</a>

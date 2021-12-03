@@ -23,7 +23,7 @@
 </head>
   <body>
  
-<div id = "header">
+  <div id = "header">
   <h1 id ="title">PRACT</h1>
   <h3 id ="sub-title">Progress, Reminders, and Consultant Team</h3>
 </div>
@@ -39,23 +39,20 @@
               <a class="nav-link" href="../index.php">HOME <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../team.php">DEVELOPERS</a>
+              <a class="nav-link" href="../contact_us.php">CONTACT US</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../login.php">LOG IN</a>
+              <a class="nav-link" href="discussion.php">DISCUSSION</a>
             </li>
-            <li class="nav-item dropdown dmenu">
-            <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
-              PROFILE
-            </a>
-            <div class="dropdown-menu sm-menu">
-              <a class="dropdown-item" href="../profile.php">PROFILE</a>
-              <a class="dropdown-item" href="../schedule.php">SCHEDULE</a>
-              <a class="dropdown-item" href="../group-profile.php">GROUP</a>
-            </div>
+              
+            <?php 
+            if ($_SESSION["is_admin"] == 1) {
+              echo "<a class=\"nav-link\" href=\"../administrator.php\">ADMIN</a>";
+            }
+            ?>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact_us.php">CONTACT US</a>
+              <a class="nav-link" href="../logout.php">LOG OUT</a>
             </li>
           </ul>
         </div>
