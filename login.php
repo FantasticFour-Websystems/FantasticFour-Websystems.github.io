@@ -1,12 +1,13 @@
 <html>
  <head>
-  <title>PHP Test</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <title>PRACT | LogIn</title>
+  <link href="login.css" rel="stylesheet" type="text/css" />
 </head>
   <body>
+  <div id = "header">
+  <h1 id ="title">PRACT</h1>
+  <h3 id ="sub-title">Progress, Reminders, and Consultant Team</h3>
+</div>
   <div class="wrapper fadeInDown">
       <div id="formContent">
         <!-- Tabs Titles -->
@@ -18,17 +19,14 @@
 
         <!-- Login Form -->
         <form id = "login" action="db_login.php" method="post">
-          <input type="text" id="username" class="fadeIn second" name="username" placeholder="username">
-          <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
-          <a href="#"><input type="submit" class="fadeIn fourth" value="Log In"></a>
-            
-          </br>
+          <input type="text" id="username" class="fadeIn first" name="username" placeholder="username">
+          <input type="password" id="password" class="fadeIn second" name="password" placeholder="password">
+          <a href="#"><input type="submit" class="fadeIn second" value="Log In"></a>
         </form>
 
         <!-- Remind Password -->
         <div id="formFooter">
         
-        <a class="underlineHover" href="#">Forgot Password?</a>
         <a class="underlineHover" href="register.php">Sign Up</a>
         </div>
 
