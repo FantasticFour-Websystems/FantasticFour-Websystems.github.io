@@ -66,13 +66,13 @@
       
 <div class="m-4">
     <nav class="nav nav-pills">
-        <a href="discussion.php" style = "margin-right: 1em;" class="nav-item nav-link active">
+        <a href="discussion.php" style = " margin-right: -1em; margin-right: 1em; background-color: #7b876d;" class="nav-item nav-link active">
             <i class="bi-house-door"></i> DISCUSSION BOARD
         </a>
-        <a href="create_topic.php" style = "margin-right: 1em;" class="nav-item nav-link active">
+        <a href="create_topic.php" style = "margin-right: 1em; background-color: #7b876d;" class="nav-item nav-link active">
             <i class="bi-person"></i> CREATE TOPIC
         </a>
-        <a href="create_cat.php" style = "margin-right: 1em;" class="nav-item nav-link active">
+        <a href="create_cat.php" style = "margin-right: 1em; background-color: #7b876d;" class="nav-item nav-link active">
             <i class="bi-envelope"></i> CREATE CATEGORY
         </a>
         

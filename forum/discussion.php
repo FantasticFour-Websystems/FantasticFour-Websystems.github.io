@@ -6,7 +6,7 @@ include 'header.php';
 <h3>Discussion Topics</h3>
 <?php
  $dbOk = false;
-  @ $db = new mysqli('localhost', 'root', '', 'test_db');
+  @ $db = new mysqli('localhost', 'root', '', 'pract');
   if ($db->connect_error) {
     echo '<div class="messages">Could not connect to the database. Error: ';
     echo $db->connect_errno . ' - ' . $db->connect_error . '</div>';
@@ -53,7 +53,7 @@ include 'header.php';
                 <div id="collapse'. $record['cat_id'] .'" class="accordion-collapse collapse" data-bs-parent="#myAccordion">
                     <div class="card-body">';
                  echo ('<a href="topic.php?id=' . $record['topic_id']. '">' . $record['topic_subject'] .'</a><br>'  );
-
+                      
               }
         }
         echo '</div>

@@ -6,26 +6,22 @@ include 'header.php';
 if($_SERVER['REQUEST_METHOD'] != 'POST')
 {
     //the form hasn't been posted yet, display it
-    echo '<form method="post" action="">
+    echo '<form method="post" action="" style = "padding-left: 30px; padding-right: 30px;">
         <div class="row mb-3">
             <label for="CatName" class="col-sm-2 col-form-label">Category Name</label>
             <div class="col-sm-10">
-                <input type="text" name = "cat_name" class="form-control" id="inputCatName" placeholder="Category Name">
+                <input type="text" name = "cat_name" class="form-control"  id="text" placeholder="Category Name">
             </div>
         </div>
         <div class="row mb-3">
             <label for="CatDesc" class="col-sm-2 col-form-label">Category Description</label>
             <div class="col-sm-10">
-                <textarea name = "cat_description" class="form-control" id="inputCatDesc" placeholder="Category Description"></textarea>
+                <textarea class="form-control" name = "cat_description" id="cat_description" placeholder="Category Description"></textarea>
             </div>
         </div>
-        <input class="btn btn-primary" type="submit" style = "width: 16vw; float: right;" value="SUBMIT CATEGORY" /><br><br>
-     </form>';
-    
-    
-}
-
-                            
+        <input class="btn btn-primary" type="submit" style = "width: 16vw; float: right; background-color: #7b876d;" value="SUBMIT CATEGORY" /><br><br>
+     </form>';    
+}                           
                             
 else
 {
