@@ -1,4 +1,5 @@
 <?php
+session_start(); 
 include 'connect.php';
 include 'header.php';
 
@@ -40,7 +41,7 @@ echo '<h2>Create a topic</h2>';
                     <div class="row mb-3">
                         <label for="inputSubject" class="col-sm-2 col-form-label">Subject</label>
                         <div class="col-sm-10">
-                            <input type="email" class="form-control" id="inputEmail" placeholder="Subject">
+                            <input type="text" class="form-control" id="text" name = "topic_subject" placeholder="Subject">
                         </div>
                     </div>
                     
@@ -91,7 +92,7 @@ echo '<h2>Create a topic</h2>';
                    VALUES('" . mysqli_real_escape_string($conn, $_POST['topic_subject']) . "',
                                NOW(),
                                " . mysqli_real_escape_string($conn, $_POST['topic_cat']) . ",
-                               " . $_SESSION['userid'] . "
+                               " . $_SESSION['user_id'] . "
                                )";
 
             $result = mysqli_query($conn ,$sql);
@@ -116,7 +117,7 @@ echo '<h2>Create a topic</h2>';
                             ('" . mysqli_real_escape_string($conn ,$_POST['post_content']) . "',
                                   NOW(),
                                   " . $topicid . ",
-                                  " . $_SESSION['userid'] . "
+                                  " . $_SESSION['user_id'] . "
                             )";
                 $result = mysqli_query($conn, $sql);
 
