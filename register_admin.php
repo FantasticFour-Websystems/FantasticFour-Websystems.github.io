@@ -98,7 +98,7 @@ if(isset($_POST["admin_signup"])) {
         <form id = "login" action="register_admin.php" method="post">
         <input type="text" id="password" class="fadeIn second" name="gname" placeholder="Enter a Group Name">
         <input type="text" id="username" class="fadeIn second" name="username" placeholder="Username">
-        <input type="text" id="password" class="fadeIn second" name="password" placeholder="Password">
+        <input type="text" id="password" class="fadeIn second" name="password" placeholder="Password (at least 8 characters)">
           <input type="text" id="username" class="fadeIn second" name="fname" placeholder="First Name">
           <input type="text" id="password" class="fadeIn third" name="lname" placeholder="Last Name">
           <input type="text" id="username" class="fadeIn third" name="email" placeholder="Email">
