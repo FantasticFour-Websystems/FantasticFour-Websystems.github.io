@@ -16,6 +16,10 @@ if(isset($_POST["signup"])) {
      }
     $user = validate($_REQUEST["username"]);
     $pass = validate($_REQUEST["password"]);
+    if (strlen($pass) < 8) {
+      header("Location: register_admin.php?error=Password must be at least 8 characters");
+        exit();
+    }
     $first = validate($_REQUEST["fname"]);
     $last = validate($_REQUEST["lname"]);
     $group = validate($_REQUEST["group"]);
