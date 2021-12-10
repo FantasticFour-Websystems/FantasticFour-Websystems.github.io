@@ -8,6 +8,10 @@ if (!$conn) {
 
 ?>
 
+<?php
+if(isset($_POST[""]))
+?>
+
 <html>
  <head>
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -149,7 +153,7 @@ $group = $_SESSION["group_id"];
                 
             </form> 
                 <div class="stream-posts">
-                    
+                    <form action="administrator.php" method="post">
                     <?php 
                     if (isset($_POST["view_task"])) {
                       $user = $_POST["view_task"];
@@ -169,7 +173,8 @@ $group = $_SESSION["group_id"];
                           "<div class=\"sp-author\">
                             <a href=\"#\" class=\"sp-author-avatar\"><img src=\"https://bootdey.com/img/Content/avatar/avatar6.png\" alt=\"\"></a>
                             <h6 class=\"sp-author-name\"><a href=\"#\">".$n["fname"] . " " . $n["lname"] ."</a></h6></div>".
-                          "<div class=\"sp-content\"><div class=\"sp-info\">".$n["fname"] . " " . $n["lname"]."</div><p class=\"sp-paragraph mb-0\">".$t["text"]."</p></div></div>";
+                          "<div class=\"sp-content\"><div class=\"sp-info\">".$n["fname"] . " " . $n["lname"]."</div><p class=\"sp-paragraph mb-0\">".$t["text"]."</p></div>
+                          <input class=\"remove\"type=\"submit\" name=\"remove_t\"value=\"". $t["id"] ."\"></div>";
                           echo $html;
                         }
                     }
@@ -178,7 +183,7 @@ $group = $_SESSION["group_id"];
                         $query_a = $conn->prepare($sql_a);
                         $query_a->execute();
                         $q_a = $query_a->fetchAll();
-                        echo "<h3>All Tasks:</h3>";
+                        echo "<h3>All Tasks:</h3><form>";
                         foreach ($q_a as $a) {
                             $id = $a["task_userid"];
                             $sql = "SELECT * FROM `users` WHERE `user_id` = $id";
@@ -192,13 +197,16 @@ $group = $_SESSION["group_id"];
                             <a href=\"#\" class=\"sp-author-avatar\"><img src=\"https://bootdey.com/img/Content/avatar/avatar6.png\" alt=\"\"></a>
                             <h6 class=\"sp-author-name\"><a href=\"#\">".$q["fname"] . " " . $q["lname"] ."</a></h6></div>";
                             }
-                            $html2 = "<div class=\"sp-content\"><div class=\"sp-info\">".$q["fname"] . " " . $q["lname"]."</div><p class=\"sp-paragraph mb-0\">".$a["text"]."</p></div></div>";
+                            $html2 = "<div class=\"sp-content\"><div class=\"sp-info\">".$q["fname"] . " " . $q["lname"]."</div><p class=\"sp-paragraph mb-0\">".$a["text"]."</p></div>
+                            <input type=\"submit\" class=\"remove\" name=\"remove_t\"value=\"". $a["id"] ."\"></div>";
                             $html3 = $html1.$html2;
                             echo $html3;
                         }
+                    
                     }
 
-                    ?>     
+                    ?>    
+                    </form> 
                 </div>
                 <!-- /.stream-posts -->
             </div>
@@ -223,6 +231,12 @@ if (isset($_POST["add_t"])) {
   $query->execute();
 }
 
+if (isset($_POST["remove_t"])) {
+    $id = $_POST["remove_t"];
+    $sql = "DELETE FROM `task` WHERE `id` = $id";
+    $query = $conn->prepare($sql);
+    $query->execute();
+}
+
 ?>
 </html>
-
