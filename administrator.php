@@ -233,7 +233,6 @@ if (isset($_POST["add_t"])) {
 
 if (isset($_POST["remove_t"])) {
     $id = $_POST["remove_t"];
-    echo $id;
     $sql = "DELETE FROM `task` WHERE `id` = $id";
     $query = $conn->prepare($sql);
     $query->execute();
